@@ -1,0 +1,22 @@
+.container{  }
+
+.navbar-form{  }
+
+input[type="text"]{
+   margin-top: 10px;
+   padding-bottom: 10px;
+}
+
+[type="submit"]{
+    margin-top: 20px;;
+    width: 100%;
+}
+
+table{
+    width: 100%;
+}
+
+.unknow{
+  color: red;
+}
+

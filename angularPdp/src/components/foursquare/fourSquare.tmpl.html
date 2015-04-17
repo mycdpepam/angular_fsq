@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-md-12">
+        <input type="text" class="form-control" ng-model="searchText">
+        <div class="search-wrap form-horizontal">
+            <form  role="search" id="searchText">
+                <input type="text" class="form-control" ng-model="nearby">
+                <input type="text" class="form-control" ng-model="query">
+                <button type="submit" ng-click ="search()" class=" pull-right btn fll btn-danger">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table>
+            <tr>
+                <th><a href=""  ng-click="sortparam = 'name'; reverse=false"> Name: &uarr;</a>
+                         <a href="" ng-click="sortparam = '-name'; reverse=false"> &darr;</a></th>
+
+                <th><a href=""  ng-click="sortparam = 'url'; reverse=false">Url:&uarr;</a>
+                <a href="" ng-click="sortparam = '-url'; reverse=false"> &darr;</a></th>
+
+                <th><a href="" ng-click="sortparam = 'contact.phone'; reverse=false">Phone: &uarr;</a>
+                    <a href="" ng-click="sortparam = '-contact.phone'; reverse=false">   &darr;</a></th>
+            </tr>
+
+            <tr ng-repeat="place in places | filter:searchText |orderBy:sortparam" class="repeated-item"
+                ng-init="place.url = place.url||'unknow';
+                         place.contact.phone = place.contact.phone ||'unknow phone'">
+                <td>{{place.name|uppercase}}</td>
+                <td class="{{place.url||'unknow'}}">
+                    <a    ng-if="place.url !== 'unknow'" ng-click="windowOpen(place.url)"  target = '_blank' ng-href="{{place.url}}">{{place.url}}</a>
+                    <span ng-if="place.url ==='unknow'"  >{{place.url}}</span>
+                </td>
+                <td class="{{place.contact.phone||'unknow'}}">{{place.contact.phone}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
