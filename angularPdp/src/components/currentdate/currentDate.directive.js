@@ -2,6 +2,7 @@
 
     angular.module('FourSquareApp')
         .controller('CurrentCtrl', function($scope, $interval){
+            $scope.currentTime = new Date();
             $interval(function(){
                 $scope.currentTime = new Date();
             },1000);
