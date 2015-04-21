@@ -1,4 +1,4 @@
-
+<div>
     <input type="text" class="form-control" ng-model="searchText">
     <div class="search-wrap form-horizontal">
         <form  role="search" id="searchText">
@@ -8,16 +8,13 @@
         </form>
     </div>
 
-
-
-
     <table>
         <tr>
             <th><a href=""  ng-click="sortparam = 'name'; reverse=false"> Name: &uarr;</a>
-                     <a href="" ng-click="sortparam = '-name'; reverse=false"> &darr;</a></th>
+                <a href="" ng-click="sortparam = '-name'; reverse=false"> &darr;</a></th>
 
             <th><a href=""  ng-click="sortparam = 'url'; reverse=false">Url:&uarr;</a>
-            <a href="" ng-click="sortparam = '-url'; reverse=false"> &darr;</a></th>
+                <a href="" ng-click="sortparam = '-url'; reverse=false"> &darr;</a></th>
 
             <th><a href="" ng-click="sortparam = 'contact.phone'; reverse=false">Phone: &uarr;</a>
                 <a href="" ng-click="sortparam = '-contact.phone'; reverse=false">   &darr;</a></th>
@@ -34,10 +31,4 @@
             <td class="{{place.contact.phone||'unknow'}}">{{place.contact.phone}}</td>
         </tr>
     </table>
-
-
-
-
-
-
-
+</div>

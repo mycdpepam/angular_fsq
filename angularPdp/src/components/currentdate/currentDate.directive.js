@@ -12,11 +12,12 @@
             return{
                restrict     : 'AECM',
                templateUrl  : '../src/components/currentdate/currentDate.tmpl.html',
+               replace      : true,
                controller   : 'CurrentCtrl',
                controllerAs : 'current',
                link         : function(scope, element){
                    element.on('mouseenter', function(){
-                      console.log('current date')
+
                    })
                }
             }

@@ -17,10 +17,11 @@
         })
         .directive('foursquare', function(){
             return{
-                restrict:'AECM',
-                templateUrl:'../src/components/foursquare/fourSquare.tmpl.html',
-                controller:'StartCtrl',
-                controllerAs:'start'
+                restrict     :'AECM',
+                replace      : true,
+                templateUrl  :'../src/components/foursquare/fourSquare.tmpl.html',
+                controller   :'StartCtrl',
+                controllerAs :'start'
             }
         })
 })();

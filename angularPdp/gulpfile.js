@@ -11,10 +11,11 @@ gulp.task('css', function(){
         .pipe(connect.reload())
 });
 
-gulp.task('start', function(){
-    gulp.src('./src/foursquare/*/*.start')
+gulp.task('js', function(){
+    gulp.src('./src/**/**/*.js')
         .pipe(connect.reload())
 });
+
 
 gulp.task('connect', function () {
     connect.server({
@@ -28,9 +29,9 @@ gulp.task('watch', function () {
     gulp.watch(['./src/css/*.css'], ['css']);
 
     gulp.watch(['./src/*.html'], ['html']);
-    gulp.watch(['./src/*/*/*.html'], ['html']);
-    gulp.watch(['./src/*/*/*.css'], ['css']);
-    gulp.watch(['./src/*/*/.*.js'], ['js']);
+    gulp.watch(['./src/**/**/*.html'], ['html']);
+    gulp.watch(['./src/**/**/*.css'], ['css']);
+    gulp.watch(['./src/**/**/*.js'], ['js']);
 
 });
 
